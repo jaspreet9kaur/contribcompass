@@ -16,13 +16,19 @@ Result: exit 0, nine present evidence categories and no discovery warnings. This
 
 Temporary fixtures for the final run were directed to a task-local D: scratch directory. No dependency installation or paid service was required.
 
+## GitHub Actions verification
+
+[Checks run 41513378410](https://github.com/jaspreet9kaur/contribcompass/actions/runs/41513378410) passed for source commit `dd8bf9d6b39994fe452d6a315c3fe7cc7c88cb4f` on 2026-11-03 (Asia/Calcutta).
+
+All four jobs succeeded: ubuntu-latest and windows-latest, each on Python 3.11 and 3.14. The Python 3.14 job logs on both operating systems explicitly show all 13 tests ran, including successful hard-link and symbolic-link cases. The 3.11 job statuses and test steps were verified successful; their detailed skip counts were not separately inspected. The workflow also ran the strict documentation self-check in all four jobs.
+
+Private vulnerability reporting was enabled in the repository UI and its enabled state verified. No test report was submitted, and notification delivery remains untested.
+
 ## Not executed or established
 
-- Hosted Windows/Linux and Python 3.11/3.14 CI matrix.
-- Link rejection on a host permitting the relevant link fixtures.
 - Current advisory scans for Python, runner images and GitHub Actions.
 - A full adversarial audit or race-proof filesystem isolation.
 - External usability sessions, maintainer adoption or package downloads.
-- GitHub private vulnerability reporting and conduct-reporting setup.
+- Private-report notification delivery and a private conduct-reporting contact.
 
 See SECURITY_REVIEW.md and ROADMAP.md for the remaining launch work.

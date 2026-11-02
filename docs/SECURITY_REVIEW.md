@@ -24,12 +24,12 @@ The user selects a local directory. The Python standard library reads only suppo
 | CORS and webhook signatures/replay | Not applicable: no HTTP or webhook surfaces. |
 | Source maps and sensitive UI/log/export data | No browser bundle or source maps. Source is deliberately public. Terminal/Markdown controls are escaped. CLI target errors avoid dumping local paths. No telemetry or logging. |
 | Vulnerable dependencies | No third-party Python runtime packages. This is not a clean advisory scan: Python/OS advisories were not scanned. GitHub Actions are third-party development dependencies; commit refs were resolved from official APIs and pinned, with Dependabot configuration. Their current advisories and hosted runner images are not validated here. |
-| Filesystem links and races | Source-reviewed: links, Windows reparse points and hard links are rejected; file identity compared before read. Link tests may skip depending on host capabilities; see VALIDATION.md. Not race-proof against concurrent ancestor replacement or special platform filesystem behavior. |
+| Filesystem links and races | Source-reviewed and functional tests: links, Windows reparse points and hard links are rejected; file identity compared before read. Link tests skipped locally but passed in verified Python 3.14 CI logs on Windows and Linux; see VALIDATION.md. Not race-proof against concurrent ancestor replacement or special platform filesystem behavior. |
 
 ## Launch requirements and unvalidated checks
 
-- Configure and verify private vulnerability and conduct reporting on the intended GitHub repository.
-- Run the hosted CI matrix after publication; runner permissions and execution results are not established by the YAML file's presence.
+- Private vulnerability reporting was enabled and the UI state verified. Actual report delivery remains untested. The maintainer still needs a private conduct-reporting contact and an alternate contact for complaints involving the maintainer.
+- The hosted Windows/Linux and Python 3.11/3.14 CI matrix passed for commit dd8bf9d6b39994fe452d6a315c3fe7cc7c88cb4f; see VALIDATION.md. This establishes those functional checks, not production security.
 - Perform a current advisory review of the chosen Python runtime and GitHub Actions before declaring a public supported release.
 - No live probing or full security exploit validation was performed. Functional tests of agent-authored code and fictional fixtures do not establish an OS-enforced hostile-code sandbox. A future adversarial audit needs isolated execution with network, filesystem, resource and environment controls.
 - Any future remote retrieval, user accounts, credential handling, automatic remediation or hosted service requires a new boundary review.

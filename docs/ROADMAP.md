@@ -2,14 +2,14 @@
 
 ## Current state
 
-A source-run prototype exists, and the public repository is [jaspreet9kaur/contribcompass](https://github.com/jaspreet9kaur/contribcompass). Functional tests and a self-report can be reproduced. No hosted service, registry package, external pilot, downloads, or active community is claimed.
+A source-run prototype exists, and the public repository is [jaspreet9kaur/contribcompass](https://github.com/jaspreet9kaur/contribcompass). The Windows/Linux and Python 3.11/3.14 CI matrix passed, and private vulnerability reporting is enabled. Functional tests and a self-report can be reproduced. No hosted service, registry package, external pilot, downloads, or active community is claimed.
 
 ## First public pilot
 
 1. Review the source and provisional project name. Check naming conflicts before a public release.
-2. Connect the intended GitHub account, create a public repository under jaspreet9kaur, and publish the source with its MIT license and honest prototype status.
-3. Configure private vulnerability reporting and a private conduct-reporting contact, and verify the owner receives notifications. Do not treat the presence of SECURITY.md as completion.
-4. Run the configured Windows/Linux and Python-version CI matrix. Record skipped tests and investigate platform differences; local tests do not prove the matrix passed.
+2. Completed: connected jaspreet9kaur, created the public repository, and published the MIT-licensed source with its prototype status.
+3. Private vulnerability reporting is enabled; verify notification delivery and add a private conduct-reporting contact. Do not treat the presence of SECURITY.md as completion.
+4. Completed for the initial implementation commit: the Windows/Linux and Python-version CI matrix passed. See VALIDATION.md for the exact source ref and log coverage.
 5. Invite a small number of willing developers to test the tool. Obtain permission before retaining identifiable feedback or contacting maintainers. No unsolicited automated messages, issues or PRs.
 
 ## Evaluation before expanding scope

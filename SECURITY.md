@@ -6,7 +6,7 @@
 
 ## Report privately
 
-Before public launch, the repository owner must enable GitHub private vulnerability reporting under repository Settings > Security, and verify a report can be received. That channel is not configured in this local source bundle. Do not put exploit details, private documents, credentials, or personal information into public issues. No monitored security email address is claimed.
+Use [GitHub private vulnerability reporting](https://github.com/jaspreet9kaur/contribcompass/security/advisories/new). The repository setting was enabled and verified on 2026-11-03. Actual notification delivery and maintainer response times have not been tested. Do not put exploit details, private documents, credentials, or personal information into public issues. No security email address or response SLA is claimed.
 
 For a report, describe the affected version, input boundary, expected behavior, observed result and a minimal fictional fixture. Do not test against systems or data you do not own.
 
